@@ -5,7 +5,7 @@ import { IoIosArrowForward } from 'react-icons/io';
 import logo from '../assets/logo.png';
 import { categories } from '../utils/data';
 
-const isNotActiveStyle = 'flex items-center px-5 gap-3 text-gray-500 hover:text-black transition-all duration-200 ease-in-out capitalize';
+const isNotActiveStyle = 'flex items-center px-5 gap-3 text-gray-200 hover:text-white transition-all duration-200 ease-in-out capitalize';
 const isActiveStyle = 'flex items-center px-5 gap-3 font-extrabold border-r-2 border-black  transition-all duration-200 ease-in-out capitalize';
 
 const Sidebar = ({ closeToggle, user }) => {
@@ -14,7 +14,7 @@ const Sidebar = ({ closeToggle, user }) => {
   };
 
   return (
-    <div className="flex flex-col justify-between bg-white h-full overflow-y-scroll min-w-210 hide-scrollbar">
+    <div className="flex flex-col justify-between bg-black text-lg text-white  h-full overflow-y-scroll min-w-210 hide-scrollbar">
       <div className="flex flex-col">
         <Link
           to="/"
@@ -49,7 +49,7 @@ const Sidebar = ({ closeToggle, user }) => {
       {user && (
         <Link
           to={`user-profile/${user._id}`}
-          className="flex my-5 mb-3 gap-2 p-2 items-center bg-white rounded-lg shadow-lg mx-3"
+          className="flex my-5 mb-3 gap-2 p-2 items-center bg-black rounded-lg shadow-lg mx-3"
           onClick={handleCloseSidebar}
         >
           <img src={user.image} className="w-10 h-10 rounded-full" alt="user-profile" />
