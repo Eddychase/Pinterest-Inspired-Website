@@ -6,6 +6,7 @@ import { Link, Route, Routes } from 'react-router-dom';
 import { Sidebar, UserProfile } from '../components';
 import { userQuery } from '../utils/data';
 import { client } from '../client';
+import Pins from './Pins';
 import logo from '../assets/logo.png';
 
 const Home = () => {
@@ -21,7 +22,7 @@ const Home = () => {
     client.fetch(query).then((data) => {
       setUser(data[0]);
     });
-  },[]);
+  }, []);
 
   useEffect(() => {
     scrollRef.current.scrollTo(0, 0);
@@ -54,7 +55,7 @@ const Home = () => {
       <div className="pb-2 flex-1 h-screen overflow-y-scroll" ref={scrollRef}>
         <Routes>
           <Route path="/user-profile/:userId" element={<UserProfile />} />
-          
+          <Route path="/*" element={<Pins user={user && user} />} />
         </Routes>
       </div>
     </div>
