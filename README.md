@@ -27,7 +27,7 @@ As a user of the application you will be able to:
 
 > - clone the repository to your local directory
 >
-> * `git clone https://github.com/Eddychase/Wall-E-social-pictures-app`
+> * `git clone https://github.com/Eddychase/Wall-E-Pinterest-Inspired-Website`
 >
 > - open the directory to the project
 >
